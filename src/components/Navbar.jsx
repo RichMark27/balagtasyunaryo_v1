@@ -1,10 +1,10 @@
-import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import FloranteAtLaura from "../assets/icons/Florante_at_Laura(icon).svg";
 import SearchBar from "./SearchBar";
 import AtoZSideBar from "./AtoZSideBar";
 import BuodSideBar from "./BuodSideBar";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [closeBuod, setCloseBuod] = useState(false);
@@ -20,7 +20,12 @@ function Navbar() {
     setCloseAtoZ(false);
   };
   return (
-    <header className="absolute left-0 top-0 fixed z-55 py-4 px-8 w-full bg-[#863C18]/90 animate-fadeInTop">
+    <motion.header
+      className=" left-0 top-0 fixed z-55 py-4 px-8 w-full bg-[#863C18]/90"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <nav className="max-container mx-auto">
         <ul className="flex items-center gap-8">
           <li>
@@ -57,7 +62,7 @@ function Navbar() {
         isCloseSideBar={closeBuod}
         setIsCloseSideBar={setCloseBuod}
       />
-    </header>
+    </motion.header>
   );
 }
 

@@ -28,13 +28,11 @@ function Dictionary() {
   return (
     <div className="bg-hero-bg min-h-screen w-full bg-no-repeat bg-cover pb-8">
       <Navbar />
-      <section className="max-container pt-30 mx-auto animate-fadeIn padding-x">
+      <section className="max-container pt-30 mx-auto padding-x">
         <div>
           <img
             className=" object-contain max-h-[450px] rounded-md my-2 mx-auto"
-            src={
-              result.img_URL
-            }
+            src={result.img_URL}
             alt=""
           />
         </div>

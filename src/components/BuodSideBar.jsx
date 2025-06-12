@@ -26,7 +26,7 @@ function BuodSideBar({ isCloseSideBar, setIsCloseSideBar }) {
     <aside
       className={`bg-[#A5592F] ${
         isCloseSideBar ? "block" : "hidden"
-      } w-xs h-screen  absolute left-0 top-0 z-50 px-2 overflow-auto animate-fadeSideBar`}
+      } w-xs h-screen  absolute left-0 top-0 z-50 px-2 overflow-auto`}
     >
       <div className="w-full p-2 flex justify-end items-center">
         <div

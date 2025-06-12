@@ -58,7 +58,9 @@ function SearchBar() {
 
       <div className="absolute z-50 left-0 bg-[#CAD5E2] w-full overflow-hidden top-9 rounded-b-lg">
         {isLoading ? (
-          <Spinner />
+          <div className="py-4 flex items-center justify-center">
+            <Spinner />
+          </div>
         ) : (
           <div>
             {error && <p className="text-red-500 p-2">{error}</p>}
